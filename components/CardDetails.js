@@ -5,8 +5,10 @@ export default function CardImageTopJulia({ title, image, description }) {
   return (
     <View style={styles.card}>
       <Image source={image} style={styles.image} />
+      <View style={styles.textContainer}>
       <Text style={styles.text}>{title}</Text>
       <Text style={styles.cardDesc}>{description}</Text>
+    </View>
     </View>
   );
 }
@@ -14,27 +16,37 @@ export default function CardImageTopJulia({ title, image, description }) {
 const styles = StyleSheet.create({
   card: {
     width: '100%',
-    borderRadius: 10,
+    borderRadius: 12,
     backgroundColor: 'black',
     overflow: 'hidden',
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   image: {
     width: '100%',
     height: 320,
     resizeMode: 'cover',
   },
-  text: {
-    padding: 10,
+  textContainer: {
+    padding: 16,
+    alignItems: 'center',
+    color: 'white',
     fontWeight: 'bold',
-    fontSize: 20,
-    color: "white",
+
+  },
+  text:{
+      color: 'white',
+    fontSize: 20, 
+    marginBottom:8,
+    textAlign: 'center',
+    fontWeight: 'bold',
+
   },
   cardDesc: {
-    fontSize: 18,
+    fontSize: 14,
     color: "white",
     width: 300,
+    marginBotton: 12,
     textAlign: "justify"
   },
   

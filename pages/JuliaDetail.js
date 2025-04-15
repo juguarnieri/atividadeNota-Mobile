@@ -1,11 +1,24 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import Card from "../components/CardDetails"
 
-export default function JuliaDetail() {
+export default function BernardoDetail() {
   return (
-    <View style={{ padding: 20 }}>
-      <Text style={{ fontSize: 24 }}>Detalhes da Julia</Text>
-      <Text>Aqui estão os detalhes da Julia...</Text>
+    <View style={styles.container}>
+      <Card
+    title="Júlia Guarnieri"
+    image={require("../assets/fotoJulia.png")}
+    description="Olá meu nome é Júlia Guarnieri, sou aluna do Senai e do Sesi Valinhos, atualmente cursando o ensino médio e o curso de desenvolvimento de sistema, tenho 17 anos, moro em valinhos, e minha matéria preferida é matemática"
+      />
     </View>
   );
 }
+
+const styles = StyleSheet.create ({
+    container: {
+        padding: 20,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+    }
+})
