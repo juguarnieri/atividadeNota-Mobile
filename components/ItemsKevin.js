@@ -18,7 +18,6 @@ export default function CardShopKevin({ info, text, text2, text3 }) {
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: "white",
         borderRadius: 10,
         display: "flex",
         flexDirection: "row",
@@ -36,10 +35,15 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     text: {
-        borderWidth: 2,
+        borderWidth: 3,
         borderColor: "#000",
         width: 40,
+        fontWeight: "bold",
+        fontSize: 20,
         height: 30,
         borderRadius: 20,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     }
 });

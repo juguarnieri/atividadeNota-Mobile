@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, Text, Image, StyleSheet, Scro } from 'react-native';
+import { View, Button, Text, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CardShopKevin from "../components/ItemsKevin"
 import TextKevin from "../components/TextKevin"
@@ -21,20 +21,22 @@ export default function KevinHome() {
                 <View style={styles.banner}>
                     <View style={styles.card}>
                         <CardKevin
+                        text="↩"
                         info="Texto aqui também"
                         />
                         <CardKevin
+                        text="↩"
                         info="Texto aqui também"
                         />
 
                     </View>
-                        <Text style={styles.setaRight}> ⭢ </Text>
+                        <Text style={styles.setaRight}> ➡️ </Text>
                 </View>
 
                 <View style={styles.shop}>
                     <View style={styles.items}>
                         <CardShopKevin
-                        info="Lorem Ipsum é simplesmente uma simulação de texto"
+                        info="Lorem Ipsum é simplesmente"
                         text="-"
                         text2="+"
                         text3="↩"
@@ -55,7 +57,7 @@ export default function KevinHome() {
                         />
 
                         <CardShopKevin
-                        info="Lorem Ipsum é simplesmente uma simulação"
+                        info="Lorem Ipsum é simplesmente"
                         text="-"
                         text2="+"
                         text3="↩"
@@ -86,7 +88,7 @@ const styles = StyleSheet.create ({
     containerMain: {
         borderWidth: 3,
         width: "30%",
-        height: 1000,
+        height: 800,
         borderRadius: 20,
         display: "flex",
         flexDirection: "column",
@@ -116,11 +118,11 @@ const styles = StyleSheet.create ({
     },
     banner: {
         width: "90%",
-        height: 200,
+        height: 250,
         justifyContent: "center",
         alignItems: "center",
-        borderWidth: 3,
-        backgroundColor: "gray",
+        borderWidth: 1,
+        backgroundColor: "black",
         borderRadius: 20,
         marginTop: 30,
     },
@@ -131,5 +133,8 @@ const styles = StyleSheet.create ({
         display:"flex",
         alignItems: "center",
         justifyContent: "center",
-    }
+    },
+    shop: {
+        marginTop: 50,
+    },
 })
