@@ -54,7 +54,7 @@ export default function BernardoHome() {
         />
         <Image source={require("../assets/dev.png")} style={styles.card} />
         <Card 
-        title="Atividade super top que estou muito feliz em fazer"
+        title="Atividade super top que estou muito feliz em fazer, e serei bem avaliado,   i love teachers"
         />
         </div>
            </SafeAreaView>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         border: "2px solid black",
         marginHorizontal: 5,
         borderRadius: 10,
-        textAlign: 'center', 
+        textAlign: 'center'
       },
     cards: {
         display: "flex",
