@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,TouchableOpacity, Text, StyleSheet, TextInput } from 'react-native';
+import { View,TouchableOpacity, Text, StyleSheet, TextInput,SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import CardFullCaio from "../components/CardFullCaio";
 
@@ -7,40 +7,39 @@ export default function CaioHome() {
   const navigation = useNavigation();
 
   return (
-    <View style={{ padding: 20 }}>
+    <SafeAreaView style={{ padding: 20 }}>
       <Text style={styles.textPrincipal}>Bem-vindo à página do Caio!</Text>
       <Text style={styles.subText}>O mais DEV brasileiro!</Text>
-      <div style={styles.cards}>
-      <div style={styles.card}>
+      <View style={styles.cards}>
+      <TouchableOpacity style={styles.card}>
          CIRCULO PRETO NA FOOTER VAI PARA DETALHES
-      </div>
-      <div style={styles.card}>
-      </div>
-      </div>
-      <div style={styles.inputs}>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.card}>
+      </TouchableOpacity>
+      </View>
+      <Vie      w style={styles.inputs}>
       <TextInput style={styles.input}>
       </TextInput>
-      <div style={styles.circle}>
-      </div>
-      </div>
-      <CardFullCaio title="wooooow" subTitle="WOOOOOW"image={require('../assets/image.png')} />
-      <CardFullCaio title="wooooow" subTitle="WOOOOOW"image={require('../assets/image.png')} />
-      <CardFullCaio title="wooooow" subTitle="WOOOOOW"image={require('../assets/image.png')} />
-      <div style={styles.circles}>
-      <div style={styles.circleFooter}>
-      </div>
-      <div style={styles.circleFooter}>
-      </div>
-      <div style={styles.circleFooter}>
-      </div>
+      <View style={styles.circle}>
+      </View>
+      </Vie>
+      <CardFullCaio title="wooooo0000000000000000w" subTitle="WOOOOOW"image={require('../assets/perfilBernardo.jpg')} />
+      <CardFullCaio title="wooooo6666666666666666w" subTitle="WOOOOOW"image={require('../assets/CaioLacerda.jpg')} />
+      <CardFullCaio title="woooo7777777777777777ow" subTitle="WOOOOOW"image={require('../assets/image.png')} />
+      <View style={styles.circles}>
+      <View style={styles.circleFooter}>
+      </View>
+      <View style={styles.circleFooter}>
+      </View>
+      <View style={styles.circleFooter}>
+      </View>
       <TouchableOpacity  style={styles.blackButton}
         onPress={() => navigation.navigate('CaioDetail')} //Botão para ir para detalhes do Caio
       />
-      <div style={styles.circleFooter}>
-      </div>
-
-      </div>
-    </View>
+      <View style={styles.circleFooter}>
+      </View>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -65,6 +64,7 @@ const styles = StyleSheet.create({
     cards: {
         gap:40,
         display: "flex",
+        flexDirection: "row",
         marginBottom: 30,
     },
     input: {
@@ -90,11 +90,13 @@ const styles = StyleSheet.create({
         gap: 50,
         alignItems: "center",
         justifyContent: "center",
+        flexDirection: "row",
     },
     inputs: {
         display: "flex",
         gap: 30,
         marginBottom: 25,
+        flexDirection: "row",
     },
     blackButton: {
         borderRadius: "50%",
