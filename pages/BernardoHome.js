@@ -30,14 +30,14 @@ export default function BernardoHome() {
 
     return (
         <SafeAreaView style={styles.container}>
-            <div style={styles.container2}>
+            <View style={styles.container2}>
                 <Image source={require("../assets/bernardo.png")} style={styles.perfil} />
                 <Text> CLIQUE NO AZUL E VEJA MEU PERFIL </Text>
                 <Button 
                 title=""
                 onPress={() => navigation.navigate('BernardoDetail')}
                 />
-            </div>
+            </View>
             <FlatList
         style={styles.horizontalList}
         data={data} 
@@ -48,7 +48,7 @@ export default function BernardoHome() {
           <Text style={styles.horizontalItem}>{item.title}</Text>
         )}
       />
-        <div style={styles.cards}>
+        <View style={styles.cards}>
         <Card 
         title="Essa é uma atividade avaliativa solicitada pelos docentes Marcelo e Thiago"
         />
@@ -56,7 +56,7 @@ export default function BernardoHome() {
         <Card 
         title="Atividade super top que estou muito feliz em fazer, e serei bem avaliado,   i love teachers"
         />
-        </div>
+        </View>
            </SafeAreaView>
     );
 }
