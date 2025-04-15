@@ -10,14 +10,8 @@ export default function KevinHome() {
     const navigation = useNavigation();
 
     return (
+        <ScrollView>
         <View style={styles.container}>
-            <Text style={styles.apresentacao}>Bem-vindo à página do Kevin!</Text>
-            <Button
-            title="Ver Detalhes do Kevin"
-            onPress={() => navigation.navigate('KevinDetail')}
-            />
-            
-            <ScrollView>
             <View  style={styles.containerMain}>
                 <View style={styles.perfil}>
                     <Text style={styles.seta}> ⭠ </Text>
@@ -68,9 +62,16 @@ export default function KevinHome() {
                         />
                     </View>
                 </View>
+
+                <Button
+                title="Ver Detalhes do Kevin"
+                onPress={() => navigation.navigate('KevinDetail')}
+                />
             </View>
-            </ScrollView>
+
+            
         </View>
+        </ScrollView>
         );
 }
 
@@ -99,8 +100,9 @@ const styles = StyleSheet.create ({
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         marginTop: 30,
+        width: "90%",
     },
     seta: {
         fontSize: 30,
