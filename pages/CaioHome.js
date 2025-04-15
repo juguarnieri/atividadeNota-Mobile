@@ -17,15 +17,15 @@ export default function CaioHome() {
       <TouchableOpacity style={styles.card}>
       </TouchableOpacity>
       </View>
-      <Vie      w style={styles.inputs}>
+      <View style={styles.inputs}>
       <TextInput style={styles.input}>
       </TextInput>
       <View style={styles.circle}>
       </View>
-      </Vie>
+      </View>
       <CardFullCaio title="wooooo0000000000000000w" subTitle="WOOOOOW"image={require('../assets/perfilBernardo.jpg')} />
       <CardFullCaio title="wooooo6666666666666666w" subTitle="WOOOOOW"image={require('../assets/CaioLacerda.jpg')} />
-      <CardFullCaio title="woooo7777777777777777ow" subTitle="WOOOOOW"image={require('../assets/image.png')} />
+      <CardFullCaio title="woooo7777777777777777ow" subTitle="WOOOOOW"image={require('../assets/frozen.png')} />
       <View style={styles.circles}>
       <View style={styles.circleFooter}>
       </View>
