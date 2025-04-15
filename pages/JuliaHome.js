@@ -6,6 +6,8 @@ import {
   StyleSheet,
   Button,
   SafeAreaView,
+  TouchableOpacity,
+  Image,
   FlatList,
 } from "react-native";
 
@@ -20,6 +22,24 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.content}>
+      <View style={styles.header}>
+  <TouchableOpacity
+    style={styles.blackButton}
+    activeOpacity={0.7}
+    onPress={() => navigation.navigate("JuliaDetail")}
+  />
+  
+  <View style={styles.circleImages}>
+    <Image
+      source={require("../assets/image.png")}
+      style={styles.circleImage}
+    />
+    <Image
+      source={require("../assets/image.png")}
+      style={styles.circleImage}
+    />
+  </View>
+</View>
         <ScrollView contentContainerStyle={styles.scrollContainer}>
 
           <FlatList
@@ -36,6 +56,26 @@ export default function HomeScreen() {
             contentContainerStyle={{ paddingBottom: 16 }}
           />
           <CardImageTopJulia
+            title="Daisy"
+            image={require("../assets/image.png")}
+            description="Descrição do Card 4."
+          />
+          <CardImageTopJulia
+            title="Rosalina"
+            image={require("../assets/image.png")}
+            description="Descrição do Card 4."
+          />
+                    <CardImageTopJulia
+            title="Daisy"
+            image={require("../assets/image.png")}
+            description="Descrição do Card 4."
+          />
+          <CardImageTopJulia
+            title="Rosalina"
+            image={require("../assets/image.png")}
+            description="Descrição do Card 4."
+          />
+                    <CardImageTopJulia
             title="Daisy"
             image={require("../assets/image.png")}
             description="Descrição do Card 4."
@@ -65,6 +105,30 @@ const styles = StyleSheet.create({
     padding: 20,
 
   },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 20,
+    paddingHorizontal: 20,
+    marginTop: 20,
+  },
+  blackButton: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: "#000",
+    opacity: 0.8,
+  },
+  circleImages: {
+    flexDirection: "row",
+    gap: 10,
+  },
+  circleImage: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+  },
   scrollContainer: {
     padding: 16,
     paddingBottom: 100,
@@ -88,3 +152,4 @@ const styles = StyleSheet.create({
   },
 
 });
+
