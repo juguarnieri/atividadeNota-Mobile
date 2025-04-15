@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Card from "../components/CardDetails"
 
-export default function BernardoDetail() {
+export default function JuliaDetail() {
   return (
     <View style={styles.container}>
       <Card
