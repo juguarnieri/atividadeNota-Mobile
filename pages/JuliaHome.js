@@ -1,10 +1,8 @@
 import React from "react";
 import {
   View,
-  Text,
   ScrollView,
   StyleSheet,
-  Button,
   SafeAreaView,
   TouchableOpacity,
   Image,
@@ -22,74 +20,72 @@ export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safe}>
       <View style={styles.content}>
-      <View style={styles.header}>
-  <TouchableOpacity
-    style={styles.blackButton}
-    activeOpacity={0.7}
-    onPress={() => navigation.navigate("JuliaDetail")}
-  />
-  
-  <View style={styles.circleImages}>
-    <Image
-      source={require("../assets/image.png")}
-      style={styles.circleImage}
-    />
-    <Image
-      source={require("../assets/image.png")}
-      style={styles.circleImage}
-    />
-  </View>
-</View>
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <View style={styles.header}>
+          <TouchableOpacity
+            style={styles.blackButton}
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate("JuliaDetail")}
+          />
+          <View style={styles.circleImages}>
+            <Image
+              source={require("../assets/perfil.png")}
+              style={styles.circleImage}
+            />
+            <Image
+              source={require("../assets/perfil2.png")}
+              style={styles.circleImage}
+            />
+          </View>
+        </View>
 
+        <ScrollView
+          contentContainerStyle={styles.scrollContainer}
+          showsVerticalScrollIndicator={false}
+        >
           <FlatList
             data={[
-              { id: 9,  image: require("../assets/image.png") },
-              { id: 10, image: require("../assets/image.png") },
+              { id: 9, image: require("../assets/princesaGeral.png") },
+              { id: 10, image: require("../assets/princesaGeral2.png") },
             ]}
-            renderItem={({ item }) => (
-              <CardSquareJulia image={item.image} />
-            )}
+            renderItem={({ item }) => <CardSquareJulia image={item.image} />}
             keyExtractor={(item) => item.id.toString()}
             numColumns={2}
+            scrollEnabled={false} 
             columnWrapperStyle={{ justifyContent: "space-between" }}
-            contentContainerStyle={{ paddingBottom: 16 }}
-          />
-          <CardImageTopJulia
-            title="Daisy"
-            image={require("../assets/image.png")}
-            description="Descrição do Card 4."
-          />
-          <CardImageTopJulia
-            title="Rosalina"
-            image={require("../assets/image.png")}
-            description="Descrição do Card 4."
-          />
-                    <CardImageTopJulia
-            title="Daisy"
-            image={require("../assets/image.png")}
-            description="Descrição do Card 4."
-          />
-          <CardImageTopJulia
-            title="Rosalina"
-            image={require("../assets/image.png")}
-            description="Descrição do Card 4."
-          />
-                    <CardImageTopJulia
-            title="Daisy"
-            image={require("../assets/image.png")}
-            description="Descrição do Card 4."
-          />
-          <CardImageTopJulia
-            title="Rosalina"
-            image={require("../assets/image.png")}
-            description="Descrição do Card 4."
+            contentContainerStyle={{ gap: 16, marginBottom: 20 }}
           />
 
-<Button
-        title="Ver Detalhes de Julia"
-        onPress={() => navigation.navigate('JuliaDetail')}
-      />
+         <CardImageTopJulia
+            title="Ariel"
+            image={require("../assets/ariel.png")}
+            description="Descrição do Card 1."
+          />
+          <CardImageTopJulia
+            title="Branca de Neve"
+            image={require("../assets/brancaNeve.png")}
+            description="Descrição do Card 2."
+          />
+          <CardImageTopJulia
+            title="Cinderela"
+            image={require("../assets/cinderela.png")}
+            description="Descrição do Card 3."
+          />
+          <CardImageTopJulia
+            title="Pocahontas"
+            image={require("../assets/pocahontas.png")}
+            description="Descrição do Card 4."
+          />
+          <CardImageTopJulia
+            title="Frozen"
+            image={require("../assets/frozen.png")}
+            description="Descrição do Card 5."
+          />
+          <CardImageTopJulia
+            title="Bela"
+            image={require("../assets/bela.png")}
+            description="Descrição do Card 6."
+          />
+
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -102,8 +98,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   content: {
-    padding: 20,
-
+    flex: 1,
+    paddingTop: 20,
   },
   header: {
     flexDirection: "row",
@@ -111,7 +107,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
     paddingHorizontal: 20,
-    marginTop: 20,
   },
   blackButton: {
     width: 30,
@@ -128,28 +123,14 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 15,
+    borderWidth: 1,
+    borderColor: "#000",
   },
   scrollContainer: {
-    padding: 16,
-    paddingBottom: 100,
+    paddingHorizontal: 20,
+    paddingBottom: 40,
+    gap: 20,
   },
-  sectionTitle: {
-    fontWeight: "bold",
-    fontSize: 16,
-    marginTop: 20,
-    marginBottom: 10,
-  },
-  button: {
-    backgroundColor: "#007AFF",
-    padding: 12,
-    borderRadius: 10,
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  buttonText: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-
 });
+
 
