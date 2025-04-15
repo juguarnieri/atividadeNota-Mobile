@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-export default function TextKevin({ text, text2, text3 }) {
+export default function TextKevin({ info, text, text2, text3 }) {
     return (
         <View style={styles.card}>
-            <Text>Lorem Ipsum é simplesmente uma simulação de texto</Text>
+            <Text>{info}</Text>
 
             <Text style={styles.text}>{text}</Text>
             <Text style={styles.text}>{text2}</Text>
@@ -15,20 +15,25 @@ export default function TextKevin({ text, text2, text3 }) {
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: "white",
         borderRadius: 10,
-        display: "flex",
         flexDirection: "row",
         marginVertical: 10,
         width: 300,
-        alignItems: "center",
         gap: 20,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     },
     text: {
-        borderWidth: 2,
+        borderWidth: 3,
         borderColor: "#000",
         width: 40,
+        fontWeight: "bold",
+        fontSize: 20,
         height: 30,
         borderRadius: 20,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     }
 });
