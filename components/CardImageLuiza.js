@@ -15,10 +15,11 @@ const styles = StyleSheet.create({
     card: {
         width: 140,
         marginRight: 10,
-        backgroundColor: '#007AFF',
+        backgroundColor: '#ec6149',
         borderRadius: 10,
         overflow: 'hidden',
         paddingBottom: 8,
+        borderWidth: 1,
     },
     image: {
         width: '100%',
